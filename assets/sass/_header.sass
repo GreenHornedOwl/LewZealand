@@ -1,0 +1,39 @@
+.header
+	+clearfix
+	border-bottom: 6px solid $primary
+	padding-top: 30px
+	padding-bottom: 20px
+	margin-bottom: 35px
+	.logo
+		+make-xs-column(4)
+	.nav
+		+make-xs-column(8)
+		text-align: right
+		padding-top: 35px
+		ul 
+			+h-nav	
+			display: inline-block
+		a 
+			margin-left: 1em
+			&:before 
+				font-family: "FontAwesome"
+				margin-right: 0.5em
+				color: $secondary		
+			&:hover:before
+				color: $primary		
+	.new-order
+		&:before
+			content: "\f016"
+	.my-account		
+		&:before
+			content: "\f007"
+	.header-cart 
+		&:before
+			content: "\f07a"
+.footer
+	background-color: $primary
+	text-align: center
+	padding: 2em 0		
+	color: #fff
+	p 
+		margin-bottom: 0px	

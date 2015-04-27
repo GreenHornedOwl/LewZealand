@@ -1,0 +1,53 @@
+.featured
+	position: relative
+	margin-bottom: $spacing*2
+	h1
+		font-size: 62px
+		font-weight: 800
+		color: #fff 
+		position: absolute
+		left: 52px
+		bottom: 120px
+	a 
+		position: absolute
+		left: 52px
+		bottom: 60px	
+.home-box
+	+make-xs-column(4)
+	position: relative
+	margin-bottom: $spacing*2
+	img 
+		+transition(all 0.2s ease-in)
+		-webkit-filter: grayscale(1)
+		+opacity(0.6)		
+	a 
+		+transition(all 0.2s ease-in)
+		color: #fff
+		font-size : 0.9em
+		text-transform: uppercase
+		font-weight: 700
+		span 
+			line-height: 55px
+			padding: 0px $spacing
+			margin: 0 $spacing
+			position: absolute
+			bottom: 30px
+			left: 0px
+			right: 0px		
+			display: block
+			background-color: rgba(1,90,159,0.9)
+			&:after
+				font-family: FontAwesome
+				content: "\f138"
+				float: right
+				vertical-align: middle
+	&:hover 
+		img 
+			-webkit-filter: grayscale(0)
+			+opacity(1)
+		span
+			background-color: rgba(0,173,143,0.9)			
+
+				
+
+	

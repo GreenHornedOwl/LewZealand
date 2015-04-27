@@ -1,0 +1,35 @@
+.container
+	+container-fixed
+	@media (min-width: $screen-sm-min)
+		width: $container-sm
+	@media (min-width: $screen-md-min)
+		width: $container-md
+	@media (min-width: $screen-lg-min)
+		width: $container-lg
+.aside
+	+make-sm-column(3)
+.main 
+	+make-sm-column(9)	
+	padding-right: 0px
+.breadcrumbs
+	padding: 0px $spacing
+	background-color: #000
+	ul
+		+h-nav
+		a
+			color: #fff
+			line-height: 2.2em
+			&:hover
+				color: $blue
+		li 
+			font-size: 0.8em
+			font-weight: 400
+			&:after
+				content: "/"
+				margin-left: 5px
+				margin-right: 5px
+				font-weight: 700
+				color: $blue
+			&:last-child:after
+				// content: ""	
+				color: $red
