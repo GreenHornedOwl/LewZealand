@@ -1,0 +1,132 @@
+extend jade.resources/layout/master
+
+block content	
+	.container
+		.page-header
+			h1.order-header Order Guide		
+		.sort-block
+			select
+				option(value='Category') Category
+				option(value='Category') Category
+				option(value='Category') Category
+			a(href='#' class='view-cart') View Cart
+		.product-list
+			.table-heading
+				table
+					colgroup
+						col.description
+						col.pack
+						col.case-weight
+						col.price-per-lb
+						col.case-price
+						col.case-ordered
+						col.total-lbs											
+						col.total-spent
+					thead
+						tr
+							td.description DESCRIPTION / ITEM #
+							td PACK
+							td CASE WEIGHT	
+							td PRICE PER LB / UNIT
+							td CASE PRICE
+							td CASES ORDERED
+							td TOTAL LBS
+							td TOTAL SPENT
+			.product
+				.product-header
+					.accordion-trigger
+						i(class='fa fa-caret-down')
+					img(src='http://placehold.it/150x50')
+					h2 Za'atar
+				.product-content
+					table
+						colgroup
+							col.description
+							col.pack
+							col.case-weight
+							col.price-per-lb
+							col.case-price
+							col.case-ordered
+							col.total-lbs											
+							col.total-spent
+						tbody
+							tr
+								td.description 
+									img(src='http://placehold.it/82x82')
+									.content
+										p.title Raw Shawarma-Beef & Lamb - (Can be prepared in the oven)
+										p.info GF, Trans Fat Free
+										p.id 24143-861	
+								td 20
+								td 38 LB
+								td $2.49
+								td $94.92
+								td(class='case-ordered')
+									input(type='number' value='0')
+								td 0 
+								td $100
+							tr
+								td.description 
+									img(src='http://placehold.it/82x82')
+									.content
+										p.title Raw Shawarma-Beef & Lamb - (Can be prepared in the oven)
+										p.info GF, Trans Fat Free
+										p.id 24143-861	
+								td 20
+								td 38 LB
+								td $2.49
+								td $94.92
+								td(class='case-ordered')
+									input(type='number' value='0')
+								td 0 
+								td $100			
+			.product
+				.product-header
+					.accordion-trigger
+						i(class='fa fa-caret-down')
+					img(src='http://placehold.it/150x50')
+					h2 Za'atar
+				.product-content
+					table
+						colgroup
+							col.description
+							col.pack
+							col.case-weight
+							col.price-per-lb
+							col.case-price
+							col.case-ordered
+							col.total-lbs											
+							col.total-spent
+						tbody
+							tr
+								td.description 
+									img(src='http://placehold.it/82x82')
+									.content
+										p.title Raw Shawarma-Beef & Lamb - (Can be prepared in the oven)
+										p.info GF, Trans Fat Free
+										p.id 24143-861	
+								td 20
+								td 38 LB
+								td $2.49
+								td $94.92
+								td(class='case-ordered')
+									input(type='number' value='0')
+								td 0 
+								td $100
+							tr
+								td.description 
+									img(src='http://placehold.it/82x82')
+									.content
+										p.title Raw Shawarma-Beef & Lamb - (Can be prepared in the oven)
+										p.info GF, Trans Fat Free
+										p.id 24143-861	
+								td 20
+								td 38 LB
+								td $2.49
+								td $94.92
+								td(class='case-ordered')
+									input(type='number' value='0')
+								td 0 
+								td $100								
+		.sort-block
+			a(href='#' class='view-cart') View Cart

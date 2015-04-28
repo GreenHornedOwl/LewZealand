@@ -1,7 +1,29 @@
 extend jade.resources/layout/master
 block content	
 	.container
-		.aside
+		.aside.homepage-aside
+			.homepage-sidebar
+				.home-side-logo
+					img(src='assets/img/eurest.png')
+				p.user Hello Richard,
+				.side-nav
+					ul
+						li 
+							a(href='#' class='btn-blue') Star New Order
+						li
+							a(href='#' class='btn-blue') My Orders
+						li 
+							a(href='#' class='btn-blue') My Account
+				.side-item
+					p.headline Your Account Manager
+					img(src='assets/img/profile-1.png')
+					p <strong> Brandi Spracklin </strong> <br/> Mon-Fri 9am-5pm <br/> Ph: 422-555-9943	
+					a(href='#' class='btn-blue') Email us
+				.side-item
+					p.headline Your Account Manager
+					img(src='assets/img/profile-2.png')
+					p <strong> Brandi Spracklin </strong> <br/> Mon-Fri 9am-5pm <br/> Ph: 422-555-9943	
+					a(href='#' class='btn-blue') Email us	
 		.main			
 			.featured
 				img(src='assets/img/home-main-banner.jpg')
@@ -20,7 +42,3 @@ block content
 					a(href='#')
 						img(src='assets/img/home-box.jpg')
 						span Coming Soon				
-
-					
-
-		

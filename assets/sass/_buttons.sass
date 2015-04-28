@@ -1,5 +1,5 @@
 .button-border
-	padding: 0.5em 2em
+	padding: 0.4em 2em
 	border: 2px solid #fff 
 	+border-radius(0.6em)
 	background-color: transparent
@@ -10,3 +10,23 @@
 	&:hover
 		color: $primary
 		border-color: $primary
+.btn-blue
+	background-color: $secondary
+	color: #fff
+	display: block
+	+border-radius(6px)
+	padding: 0.4em 2em
+	outline: none
+	border: none
+	&:hover 
+		color: #fff
+		background-color: $primary
+.view-cart 
+	@extend .btn-blue		
+	float: right
+	&:before
+		font-family: "FontAwesome"
+		content: "\f07a"
+		margin-right: 0.5em
+.place-order
+	@extend .view-cart

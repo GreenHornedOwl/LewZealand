@@ -1,0 +1,53 @@
+.cart-heading
+	margin-bottom: 0px
+.cart-list 
+	colgroup
+		.item 
+			width: 100px
+		.description
+			width: 300px
+		.pack
+			width: 100px		
+		.unit-price
+			width: 100px		
+		.case-ordered
+			width: 100px
+		.total-lbs	
+			width: 100px										
+		.total-price
+			width: 100px	
+	.cart-content
+		margin-top: 0px
+		.case-ordered 
+			input 
+				display: inline-block
+				margin-right: 5px
+			.fa 
+				display: inline-block
+				cursor: pointer
+				&:hover
+					color: $primary	
+		.price 
+			.fa 
+				margin-left: 10px
+				font-size: 1.2em
+				color: red
+				cursor: pointer
+				&:hover 
+					transform: scale(1.1)
+		tr 
+			padding: 1em 0
+			height: 5em
+			border-bottom: 1px solid #ddd
+			vertical-align: middle
+		td 
+			text-align: left
+		.description 
+			padding-right: $spacing		
+.order-block 
+	@extend .sort-block
+	line-height: 35px					
+	vertical-align: bottom 
+	p 
+		display: inline-block
+		float: left

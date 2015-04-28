@@ -1,0 +1,10 @@
+extend jade.resources/layout/master2
+block content	
+	.container
+		.login-box
+			p Portal Login
+			form(id='login')
+				input(type='text' placeholder='Username')
+				input(type='password' placeholder='Password')
+				a(href='#') Forgot your password ?
+				button(type='submit' value='Login' form='login' class='btn-blue') Login

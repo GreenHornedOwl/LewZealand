@@ -1,22 +1,69 @@
 extend jade.resources/layout/master
-block content
-	.container.wrapper
-		.cart-page
-			include jade.resources/partials/breadcrumbs.jade
-			.cart-header
-				p Shopping cart
-				p Price per unit
-				p Quantity
-				p Total Price
-			.cart-content
-				.cart-row
-					.cart-item-title
-						p Shopping Cart
-					.cart-item-priceunit
-						p Price per unit
-					.cart-item-quantity
-						p Quantity
-					.cart-item-total
-						p Total price
-			.cart-totals
-				p Subtotal <span> This will bring you 12 loyality points </span>		 
+
+block content	
+	.container
+		.page-header
+			h1.my-cart-header My Cart	
+		.order-block
+			p SALES ORDER #: <span>ORDER-42323</span>
+			button(type='submit' class='place-order') Place Order
+		.product-list.cart-list
+			.table-heading.cart-heading
+				table
+					colgroup
+						col.item
+						col.description
+						col.pack						
+						col.unit-price						
+						col.case-ordered
+						col.total-lbs											
+						col.total-price
+					thead
+						tr
+							td.item #ITEM
+							td.description DESCRIPTION
+							td PACK						
+							td UNIT PRICE					
+							td CASES ORDERED
+							td TOTAL LBS
+							td TOTAL PRICE
+			.product				
+				.product-content.cart-content
+					table
+						colgroup
+							col.item
+							col.description
+							col.pack						
+							col.unit-price						
+							col.case-ordered
+							col.total-lbs											
+							col.total-price
+						tbody
+							tr
+								td.item 24143-861
+								td.description 									
+									.content
+										p.title Raw Shawarma-Beef & Lamb - (Can be prepared in the oven)									
+								td 20							
+								td $94.92
+								td(class='case-ordered')
+									input(type='number' value='0')
+									i(class='fa fa-refresh')
+								td 3.800 LBS 
+								td.price $10000
+									i(class='fa fa-times-circle')
+							tr
+								td.item 24143-861
+								td.description 									
+									.content
+										p.title Raw Shawarma-Beef & Lamb - (Can be prepared in the oven)									
+								td 20							
+								td $94.92
+								td(class='case-ordered')
+									input(type='number' value='0')
+									i(class='fa fa-refresh')
+								td 3.800 LBS 
+								td.price $10000
+									i(class='fa fa-times-circle')			
+		.order-block
+			button(type='submit' class='place-order') Place Order
