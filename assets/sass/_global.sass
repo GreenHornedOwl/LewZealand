@@ -56,12 +56,23 @@ select
 		+box-shadow(0px 0px 3px $primary)
 		border-color: $primary
 .page-header 
+	+clearfix
 	margin-bottom: $spacing*2
 	border-bottom: 2px solid $primary	
+	.subtitle 
+		font-size: 0.8em
+		display: inline-block
+		float: right
+		margin: 0px
+		margin-top: 26px
+		span 
+			color: $primary
 	.title
 		font-size: 35px
 		font-weight: 800
 		color: $dark-gray
+		display: inline-block
+		text-transform: uppercase
 		&:before
 			font-family: "FontAwesome"		
 			color: $secondary

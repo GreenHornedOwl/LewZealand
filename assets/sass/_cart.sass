@@ -2,9 +2,9 @@
 	&:before
 		content: "\f07a"
 .cart-heading
-	margin-bottom: 0px
+	margin-bottom: 0px	
 .cart-list 
-	+clearfix
+	+clearfix	
 	colgroup
 		+clearfix
 		.item 
@@ -16,7 +16,7 @@
 		.unit-price
 			width: 100px		
 		.case-ordered
-			width: 100px
+			width: 150px
 		.total-lbs	
 			width: 100px										
 		.total-price
@@ -24,6 +24,8 @@
 	.cart-content
 		margin-top: 0px
 		.case-ordered 
+			text-align: right
+			padding-right: 10px
 			input 			
 				margin-right: 5px
 			.fa 
@@ -50,7 +52,7 @@
 		td 
 			text-align: left
 		.description 
-			padding-right: $spacing		
+			padding-right: $spacing	
 .order-block 
 	@extend .sort-block
 	line-height: 35px					
@@ -70,6 +72,7 @@
 	margin-bottom: $spacing	
 	border-bottom: 1px solid $border-gray
 	padding-bottom: $spacing*2
+	text-align: left
 .cart-totals
 	width: 300px
 	float: right
@@ -82,3 +85,35 @@
 			height: 2.5em
 			&:last-child
 				background-color: $light-gray	
+		td 
+			text-align: left		
+			&:first-child 
+				padding-left: 5px		
+.order-summary-block
+	+clearfix
+	line-height: 35px		
+	vertical-align: bottom
+	border-bottom: 1px solid $border-gray
+	h2 
+		float: left
+		display: inline-block
+	&:last-child
+		border: none
+		margin-bottom: $spacing*3	
+.order-summary-block-content
+	padding-top: $spacing
+	font-size: 0.8em
+	margin-bottom: $spacing*3
+	p 
+		span 
+			font-weight: 600
+.cart-header 
+	font-weight: 800
+	font-size: 22px
+	color: $dark-gray		
+	padding-bottom: $spacing
+
+.receipt-list
+	.cart-content
+		.case-ordered
+			padding-right: 50px	

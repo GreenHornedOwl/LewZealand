@@ -1,0 +1,86 @@
+extend jade.resources/layout/master
+
+block content	
+	.container
+		.page-header
+			h1.title.my-cart-header Thank you for your order!
+			p.subtitle An email will be sent to <span> customer@gmail.com </span>	
+		.order-summary-block
+			h2.cart-header  Order Details			
+			button(type='submit' class='place-order') Print
+		.order-summary-block-content
+			p Order Number: <span>ORDER-42323</span>
+			p Order Date: <span>4/15/2015</span>		
+		.product-list.cart-list.receipt-list		
+			h2.cart-header Your Order
+			.table-heading.cart-heading
+				table
+					colgroup
+						col.item
+						col.description
+						col.pack						
+						col.unit-price						
+						col.case-ordered
+						col.total-lbs											
+						col.total-price
+					thead
+						tr
+							td.item #ITEM
+							td.description DESCRIPTION
+							td PACK						
+							td UNIT PRICE					
+							td CASES ORDERED
+							td TOTAL LBS
+							td TOTAL PRICE						
+			.product-content.cart-content
+				table
+					colgroup
+						col.item
+						col.description
+						col.pack						
+						col.unit-price						
+						col.case-ordered
+						col.total-lbs											
+						col.total-price
+					tbody
+						tr
+							td.item 24143-861
+							td.description 									
+								.content
+									p.title Raw Shawarma-Beef & Lamb - (Can be prepared in the oven)									
+							td 20							
+							td $94.92
+							td(class='case-ordered') 1
+							td 3.800 LBS 
+							td.price $10000
+								i(class='fa fa-times-circle')
+						tr
+							td.item 24143-861
+							td.description 									
+								.content
+									p.title Raw Shawarma-Beef & Lamb - (Can be prepared in the oven)									
+							td 20							
+							td $94.92
+							td(class='case-ordered') 0
+							td 3.800 LBS 
+							td.price $10000
+								i(class='fa fa-times-circle')			
+			.cart-summary
+				.cart-totals
+					table
+						colgroup											
+							col.case-ordered
+							col.total-lbs											
+							col.total-price
+						tbody
+							tr 
+								td Total Weight
+								td 4.140 LBS	
+								td 
+							tr 
+								td Total Price 
+								td 
+								td $20,052.34
+					p Prices exclude taxes and and shipping fees
+		.order-summary-block
+			button(type='submit' class='place-order') Print
