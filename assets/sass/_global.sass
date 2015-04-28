@@ -61,10 +61,12 @@ select
 	.title
 		font-size: 35px
 		font-weight: 800
-		color: $gray
-.order-header	
+		color: $dark-gray
+		&:before
+			font-family: "FontAwesome"		
+			color: $secondary
+			margin-right: 0.5em
+.order-header		
 	&:before 
-		font-family: "FontAwesome"
 		content: "\f016"
-		color: $secondary
-		margin-right: 0.5em
+		

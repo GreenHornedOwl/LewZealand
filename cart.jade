@@ -3,7 +3,7 @@ extend jade.resources/layout/master
 block content	
 	.container
 		.page-header
-			h1.my-cart-header My Cart	
+			h1.title.my-cart-header My Cart	
 		.order-block
 			p SALES ORDER #: <span>ORDER-42323</span>
 			button(type='submit' class='place-order') Place Order
@@ -26,44 +26,60 @@ block content
 							td UNIT PRICE					
 							td CASES ORDERED
 							td TOTAL LBS
-							td TOTAL PRICE
-			.product				
-				.product-content.cart-content
+							td TOTAL PRICE						
+			.product-content.cart-content
+				table
+					colgroup
+						col.item
+						col.description
+						col.pack						
+						col.unit-price						
+						col.case-ordered
+						col.total-lbs											
+						col.total-price
+					tbody
+						tr
+							td.item 24143-861
+							td.description 									
+								.content
+									p.title Raw Shawarma-Beef & Lamb - (Can be prepared in the oven)									
+							td 20							
+							td $94.92
+							td(class='case-ordered')
+								input(type='number' value='0')
+								i(class='fa fa-refresh')
+							td 3.800 LBS 
+							td.price $10000
+								i(class='fa fa-times-circle')
+						tr
+							td.item 24143-861
+							td.description 									
+								.content
+									p.title Raw Shawarma-Beef & Lamb - (Can be prepared in the oven)									
+							td 20							
+							td $94.92
+							td(class='case-ordered')
+								input(type='number' value='0')
+								i(class='fa fa-refresh')
+							td 3.800 LBS 
+							td.price $10000
+								i(class='fa fa-times-circle')			
+			.cart-summary
+				.cart-totals
 					table
-						colgroup
-							col.item
-							col.description
-							col.pack						
-							col.unit-price						
+						colgroup											
 							col.case-ordered
 							col.total-lbs											
 							col.total-price
 						tbody
-							tr
-								td.item 24143-861
-								td.description 									
-									.content
-										p.title Raw Shawarma-Beef & Lamb - (Can be prepared in the oven)									
-								td 20							
-								td $94.92
-								td(class='case-ordered')
-									input(type='number' value='0')
-									i(class='fa fa-refresh')
-								td 3.800 LBS 
-								td.price $10000
-									i(class='fa fa-times-circle')
-							tr
-								td.item 24143-861
-								td.description 									
-									.content
-										p.title Raw Shawarma-Beef & Lamb - (Can be prepared in the oven)									
-								td 20							
-								td $94.92
-								td(class='case-ordered')
-									input(type='number' value='0')
-									i(class='fa fa-refresh')
-								td 3.800 LBS 
-								td.price $10000
-									i(class='fa fa-times-circle')			
+							tr 
+								td Total Weight
+								td 4.140 LBS	
+								td 
+							tr 
+								td Total Price 
+								td 
+								td $20,052.34
+					p Prices exclude taxes and and shipping fees
 		.order-block
 			button(type='submit' class='place-order') Place Order

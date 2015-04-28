@@ -18,6 +18,7 @@
 	padding: 0.4em 2em
 	outline: none
 	border: none
+	line-height: 1.4
 	&:hover 
 		color: #fff
 		background-color: $primary
@@ -30,3 +31,6 @@
 		margin-right: 0.5em
 .place-order
 	@extend .view-cart
+	&:before
+		content: ""
+		margin: 0
