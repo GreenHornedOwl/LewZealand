@@ -1,0 +1,87 @@
+﻿<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=570203643087456";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="checkout-page">
+  <div class="container">
+    <div class="row">
+      <div class="wrap">
+	         
+      <div class="col-xs-12">
+      		@Translate("thankYouForYourOrder", "Thank you for your order.")
+      		 
+      		@foreach (LoopItem i in GetLoop("OrderLines")){        
+		    <div class="recipe-product">
+		      <div class="col-xs-8">          			
+		        <div class="details">  
+		          <h3 style="text-transform:uppercase;"><a href="@i.GetValue("Ecom:Order:OrderLine.ProductLink")">
+		          @i.GetValue("Ecom:Order:OrderLine.ProductName") 
+		          @if(Dynamicweb.Input.FormatBoolean(i.GetValue("Ecom:Order:OrderLine.ProductVariantText"))){<text>
+		          (@i.GetValue("Ecom:Order:OrderLine.ProductVariantText"))
+		          </text>}
+		          </a></h3> 
+		            
+		          <span class="variants">
+		             @i.GetValue("Ecom:Order:OrderLine.ProductVariantText")               
+		          </span>
+		          
+		          <ul>
+		             @foreach (LoopItem j in i.GetLoop("BOMItems"))
+		             {
+		            	<li>@j.GetValue("Ecom:Order:OrderLine.ProductName") (@j.GetValue("Ecom:Order:OrderLine.Price.PriceWithoutVATFormatted"))</li>
+		             }
+				  </ul>
+		          
+		        </div>
+          		<img src="/Files/Images/products/inter/@i.GetValue("Ecom:Order:OrderLine.ProductID")_inter.jpg">
+		            		        
+                <div class="fb-like" data-href='@i.GetValue("Ecom:Order:OrderLine.ProductLink")' data-send="true" data-width="450" data-show-faces="true"></div> 
+		      </div>
+    		  <div class="col-xs-2">
+		        <div class="price">
+                   <p>@Translate("price", "Price"):</p>
+		           <p>@Translate("vat", "VAT"):</p>
+                   <div class="total-price">
+                     <p>@Translate("totalWithVat", "Total with VAT"):</p>
+                   </div>  
+		        </div>
+		      </div>
+		      <div class="col-xs-2">
+		        <div class="price">
+                   <p>@i.GetValue("Ecom:Order:OrderLine.Price.PriceWithoutVATFormatted")</p>
+		           <p>@i.GetValue("Ecom:Order:OrderLine.VatTotalPrice")</p>
+                   <div class="total-price">
+                     <p><strong>@i.GetValue("Ecom:Order:OrderLine.TotalPrice")</strong></p>
+                   </div>  
+		        </div>
+		      </div>
+		      <div class="clearfix">&nbsp;</div> 		      
+		    </div>
+			} 
+            <div class="clearfix">&nbsp;</div> 	 
+            <div class="row">
+              <div class="col-xs-8">&nbsp;</div>   
+              <div class="col-xs-2"><strong>@Translate("vat", "VAT"):</strong></div>
+              <div class="col-xs-2"><strong>@GetValue("Ecom:Order.VAT")</strong></div>
+            </div>
+            <div class="row">
+              <div class="col-xs-8">&nbsp;</div>   
+              <div class="col-xs-2"><strong>@Translate("transport", "Transport"):</strong></div>
+              <div class="col-xs-2"><strong>@GetValue("Ecom:Order.ShippingFee")</strong></div>
+            </div>
+  			<div class="row">
+              <div class="col-xs-8">&nbsp;</div>   
+              <div class="col-xs-2"><strong>@Translate("total", "Total") (@Translate("vatIncluded", "VAT included")):</strong></div>
+              <div class="col-xs-2"><strong>@GetValue("Ecom:Order.PriceWithoutFees") </strong></div>
+            </div>
+        </div>
+		<div class="clearfix">&nbsp;</div>
+      </div>
+	</div>
+  </div>
+</div>
+    
