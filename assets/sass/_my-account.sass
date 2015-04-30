@@ -1,0 +1,33 @@
+.my-account-header 
+	&:before
+		content: "\f007"
+.block-header
+	@extend .cart-header		
+	border-bottom: 1px solid $border-gray
+.aside-inner
+	padding-left: 0	
+	.block-header 
+		margin-bottom: $spacing
+.aside-nav 
+	a 
+		border-bottom: 1px solid lighten($border-gray,10%)
+		display: block
+		padding-bottom: 0.5em
+		margin-bottom: 0.5em	
+		&:before 
+			font-family: FontAwesome
+			content: "\f0da"
+			margin-right: 0.5em
+			color: $primary			
+			+transition(all 0.2s ease-in)
+		&:hover 
+			border-color: $primary
+			&:before
+				margin-right: 1em
+
+.grid-my-account
+	thead 
+		text-align: center
+
+			
+
