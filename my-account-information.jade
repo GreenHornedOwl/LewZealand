@@ -1,0 +1,38 @@
+extend jade.resources/layout/master
+block content	
+	.container
+		.page-header
+			h1.title.my-account-header My Account
+		.aside.aside-inner
+			h2.block-header Options
+			ul.aside-nav
+				li 
+					a(href='#') My Orders
+				li 
+					a(href='#') My Details	
+		.main			
+			h2.block-header Account Information
+			.account-info
+				.main-account-info
+					p
+						span.account-title Account Name
+						span.account-value Tester@demo.com
+					p
+						span.account-title Organization
+						span.account-value Compass Group
+					p
+						span.account-title Address
+						span.account-value 1 Main St. Sringfield, CA 90025
+					p
+						span.account-title Phone
+						span.account-value (310) 555 223
+				.aside-account-info
+					p Contact your Account Representative	to make changes to your account information	
+			.aside-manager
+				.side-item
+					p.headline Your Account Manager
+					img(src='assets/img/profile-1.png')
+					p <strong> Brandi Spracklin </strong> <br/> Mon-Fri 9am-5pm <br/> Ph: 422-555-9943	
+					a(href='#' class='btn-blue') Email us
+								
+			

@@ -23,8 +23,17 @@ block content
 					thead 
 						tr 
 							td Date
-							td Order 
-							td Total
+								.sort
+									i(class='fa fa-caret-down')
+									i(class='fa fa-caret-up')
+							td Order# 
+								.sort								
+									i(class='fa fa-caret-down')
+									i(class='fa fa-caret-up')
+							td Total#
+								.sort
+									i(class='fa fa-caret-down')
+									i(class='fa fa-caret-up')
 							td 
 							td
 				table.grid-order-body
@@ -36,36 +45,36 @@ block content
 						col.print
 					tbody 
 						tr 
-							td 03/04/2015
-							td 343242342
-							td $10,100				
-							td 
+							td.date 03/04/2015
+							td.order 343242342
+							td.total $10,100				
+							td.reorder
 								a(href='#') Reorder
-							td 
+							td.print 
 								a(href='#')	Print
 						tr 
-							td 03/04/2015
-							td 343242342
-							td $10,100				
-							td 
+							td.date 03/04/2015
+							td.order 343242342
+							td.total $10,100				
+							td.reorder
 								a(href='#') Reorder
-							td 
+							td.print
+								a(href='#')	Print
+						tr
+							td.date 03/04/2015
+							td.order 343242342
+							td.total $10,100				
+							td.reorder
+								a(href='#') Reorder
+							td.print
 								a(href='#')	Print
 						tr 
-							td 03/04/2015
-							td 343242342
-							td $10,100				
-							td 
+							td.date 03/04/2015
+							td.order 343242342
+							td.total $10,100				
+							td.reorder 
 								a(href='#') Reorder
-							td 
-								a(href='#')	Print
-						tr 
-							td 03/04/2015
-							td 343242342
-							td $10,100				
-							td 
-								a(href='#') Reorder
-							td 
+							td.print 
 								a(href='#')	Print						
 				
 								
