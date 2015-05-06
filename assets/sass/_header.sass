@@ -4,12 +4,20 @@
 	padding-top: 30px
 	padding-bottom: 20px
 	margin-bottom: 35px
+	display: none
+	@media (min-width: $screen-sm-min)
+		display: block
 	.logo
 		+make-xs-column(4)
+		a
+			max-width: 255px
+		img 
+			width: 300px
+			max-width: 100%	
 	.logo-2
 		max-width: 271px
 		margin: 0 auto		
-	.nav
+	.nav		
 		+make-xs-column(8)
 		text-align: right
 		padding-top: 35px
@@ -33,16 +41,23 @@
 	.header-cart 
 		&:before
 			content: "\f07a"
+	.header-logout
+		&:before
+			content: "\f08b"		
 .footer
 	background-color: $primary
 	text-align: center
 	padding: 2em 0		
 	color: #fff
-	font-size: 0.9em
+	font-size: 0.7em
+	@media (min-width: $screen-sm-min)
+		font-size: 0.9em
 	p 
 		margin-bottom: 0px	
 .footer-fixed
 	position: fixed
 	bottom: 0px
 	left: 0px
-	right: 0px		
+	right: 0px	
+.header-login	
+	display: block		
