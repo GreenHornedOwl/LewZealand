@@ -28,6 +28,11 @@
 			padding-right: 10px
 			input 			
 				margin-right: 5px
+				max-width: 40px
+				padding: 0.5em
+				@media (min-width: $screen-sm-min)
+					max-width: 70px
+					padding: 0.5em 1em
 			.fa 
 				display: inline-block
 				cursor: pointer
@@ -49,6 +54,14 @@
 			height: 5em
 			border-bottom: 1px solid #ddd
 			vertical-align: middle
+			table 
+				margin-bottom: $spacing
+			@media (max-width: $screen-sm-min - 1)
+				border: none
+				height: auto
+				
+			&:nth-child(even) 
+				border-bottom: none			
 	.description 
 		padding-right: $spacing	
 		text-align: left
@@ -62,16 +75,30 @@
 		padding-bottom: $spacing*2
 		text-align: left
 		.cart-totals
-			width: 350px
-			float: right
-			margin-top: $spacing*2
+			+clearfix
+			width: 100%
+			@media (min-width: $screen-sm-min)
+				width: 350px
+				float: right
+				margin-top: $spacing*2
 			p 
 				margin-top: $spacing
-			table 
-				width: auto		
+			table 			
 				font-weight: 700
+				width: 50%
+				@media (min-width: $screen-sm-min)
+					width: auto		
 				tr 
 					height: 2.5em
+					background-color: $light-gray	
+					@media (max-width: $screen-sm-min - 1)
+						border: none
+						&:first-child 
+							border-top: 1px solid #ddd
+						&:last-child
+							border-bottom: 1px solid #ddd	
+					@media (min-width: $screen-sm-min)
+						background-color: #fff	
 					&:last-child
 						background-color: $light-gray	
 				td 
@@ -81,9 +108,20 @@
 .order-block 
 	@extend .sort-block
 	line-height: 35px					
-	vertical-align: bottom 
-	margin-bottom: $spacing
-	font-size: initial
+	vertical-align: bottom 	
+	font-size: initial	
+	border-bottom: 1px solid #ddd
+	padding-bottom: 0.7em
+	margin-bottom: 0.5em
+	a 
+		text-align: center
+	@media (min-width: $screen-sm-min)
+		margin-bottom: $spacing
+		border: none
+		padding: 0
+	input 
+		@media (max-width: $screen-sm-min - 1)
+			margin-bottom: 0px
 	p 
 		display: inline-block
 		float: left
@@ -92,7 +130,19 @@
 		margin-bottom: 0px
 		span 
 			font-weight: 600
-
+.mobile-order-block	
+	+clearfix
+	@media (max-width: $screen-sm-min - 1)
+		font-size: 0.75em
+		margin-bottom: 1em
+	// ul 
+	// 	+justify-nav
+	// 	a 
+	// 		width: 100%
+	// 		display: block
+	// 	button 
+	// 		width: 100% 
+	// 		display: block	
 .order-summary-block
 	+clearfix
 	line-height: 35px		

@@ -100,10 +100,19 @@ tbody
 	border-color: #00AD8F
 	background-color: #CBF6E2
 
-tr 
-	@media (max-width: $screen-sm-min+1)
-		display: block
-td
-	@media (max-width: $screen-sm-min+1)
-		display: block		
+// tr 
+// 	@media (max-width: $screen-sm-min+1)
+// 		display: block
+// td
+// 	@media (max-width: $screen-sm-min+1)
+// 		display: block		
 
+.grid-mobile
+	tbody
+		td.description
+			padding: 0
+			.content 
+				background-color: #fff
+				padding: 1em
+				border: 1px solid #ddd
+				margin-bottom: 1em

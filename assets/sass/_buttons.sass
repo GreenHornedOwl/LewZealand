@@ -34,11 +34,21 @@
 	&:before
 		content: ""
 		margin: 0
+	@media (max-width: $screen-sm-min - 1)
+		padding: 0.5em
+		margin: 0 
+		// margin-right: 0.5em
+		width: 30%
 .reset-order
 	@extend .btn-blue
 	float: right
 	background-color: #ddd	
 	margin-right: $spacing
+	@media (max-width: $screen-sm-min - 1)
+		padding: 0.5em
+		margin: 0
+		margin-right: 0.5em
+		width: 25%
 .continue-shopping
 	@extend .btn-blue
 	background-color: #75D6C5
@@ -47,3 +57,8 @@
 	float: right
 	&:hover 
 		background-color: $primary	
+	@media (max-width: $screen-sm-min - 1)
+		padding: 0.5em
+		margin: 0
+		margin-right: 0.5em
+		width: 40%
