@@ -31,6 +31,12 @@
 		font-size: 0.7em
 		line-height: 38px
 		vertical-align: top
+		outline: none 
+		border: none 
+		box-shadow: none
+		.fa
+			font-size: 1.5em
+			vertical-align: middle
 	.mobile-nav-trigger
 		text-align: right
 		width: 50%
@@ -155,3 +161,46 @@ a.fly-mask-active
 	display: block
 	@media (min-width: $screen-sm-min)
 		display: none	
+
+
+.mobile-mini-cart
+	position: relative
+	+transition(all 0.3s ease-in-out)
+	transform: translate(0px,0px)
+	-webkit-transform: translate(0%,0px)
+	position: fixed
+	right: 0%
+	top: 63px
+	width: 80%
+	height: 100%
+	bottom: 0px
+	background-color: #fafafa	
+	overflow: hidden	
+	z-index: 2
+	padding: 1em
+	@media (min-width: $screen-sm-min)
+		display: none
+	ul 
+		+v-nav	
+		display: inline-block	
+	li		
+		span 
+			font-weight: 700
+			color: $secondary	
+	p 
+		line-height: 1em
+		margin-top: 1em
+		margin-bottom: 0.5em
+		font-weight: 600
+		font-size: 1.2em
+		border-bottom: 1px solid #ddd
+		padding-bottom: 0.5em
+		&:before
+			font-family: "FontAwesome"
+			content: "\f218"		
+			color: $primary
+			font-size: 1.5em
+			vertical-align: top
+			margin-top: -3px
+			display: inline-block	
+			margin-right: 0.3em						

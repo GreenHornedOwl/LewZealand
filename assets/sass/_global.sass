@@ -82,7 +82,32 @@ select
 			margin-right: 0.5em
 .order-header		
 	&:before 
-		content: "\f016"
-		
+		content: "\f016"		
 #mainContent 
 	min-height: 600px
+	position: relative	
+.mini-cart 	
+	position:  absolute
+	right: 0px
+	font-size: 0.8em
+	top: -2em
+	text-align: right
+	display: none
+	@media (min-width: $screen-sm-min)
+		display: block
+	&:before
+		font-family: "FontAwesome"
+		content: "\f218"		
+		color: $primary
+		font-size: 1.5em
+		vertical-align: top
+		margin-top: -3px
+		display: inline-block
+	ul 
+		+h-nav	
+		display: inline-block	
+	li 
+		margin-right: 0.5em	
+		span 
+			font-weight: 700
+			color: $secondary
