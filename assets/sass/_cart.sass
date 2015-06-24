@@ -91,20 +91,28 @@
 				tr 
 					height: 2.5em
 					background-color: $light-gray	
-					@media (max-width: $screen-sm-min - 1)
+					&:last-child
+						background-color: $light-gray	
+					@media (min-width: $screen-sm-min)
+						background-color: #fff		
+					@media (max-width: $screen-sm-min - 1)						
+						color: #fff
 						border: none
 						&:first-child 
 							border-top: 1px solid #ddd
+							background-color: $secondary
 						&:last-child
 							border-bottom: 1px solid #ddd	
-					@media (min-width: $screen-sm-min)
-						background-color: #fff	
-					&:last-child
-						background-color: $light-gray	
+							background-color: darken($secondary,10)	
 				td 
 					text-align: left		
 					&:first-child 
-						padding-left: 5px		
+						padding-left: 5px	
+			@media (max-width: $screen-sm-min - 1)
+				tr:nth-child(1) td:nth-child(3), tr:nth-child(2) td:nth-child(2)
+					display: none
+				tr:nth-child(1) td:nth-child(2), tr:nth-child(2) td:nth-child(3)
+					text-align: right
 .order-block 
 	@extend .sort-block
 	line-height: 35px					
@@ -158,16 +166,21 @@
 .order-summary-block-content
 	padding-top: $spacing
 	font-size: 0.8em
-	margin-bottom: $spacing*3
+	margin-bottom: $spacing*3	
 	p 
 		span 
 			font-weight: 600
+	@media (max-width: $screen-sm-min - 1)
+		margin-bottom: 0
+		p 
+			margin-bottom: 0		
 .cart-header 
 	font-weight: 800
 	font-size: 22px
 	color: $dark-gray		
 	padding-bottom: $spacing
-
+	@media (max-width: $screen-sm-min - 1)
+		color: $secondary
 .receipt-list
 	+clearfix
 	clear: both
@@ -183,3 +196,6 @@
 	color: orange
 	.fa 		
 		margin-right: 0.3em		
+.purchase-address
+	span 
+		display: block

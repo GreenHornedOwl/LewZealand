@@ -8,7 +8,8 @@
 	@media (min-width: $screen-sm-min)
 		display: block
 	.logo
-		+make-xs-column(4)
+		+make-md-column(4)
+		+make-sm-column(4)
 		a
 			max-width: 255px
 		img 
@@ -18,12 +19,25 @@
 		max-width: 271px
 		margin: 0 auto		
 	.nav		
-		+make-xs-column(8)
+		+make-md-column(8)
+		+make-sm-column(8)
 		text-align: right
 		padding-top: 35px
+		font-size: 0.9em
+		@media (max-width: $screen-md-min - 1)
+			padding-top: 0
 		ul 
 			+h-nav	
 			display: inline-block
+		.show-tablet
+			display: none
+			@media (max-width: $screen-md-min - 1)
+				display: inline-block
+				margin-bottom: 0.5em
+		.show-desktop
+			display: none	
+			@media (min-width: $screen-md-min)
+				display: inline-block		
 		a 
 			margin-left: 1em
 			&:before 
@@ -34,7 +48,7 @@
 				color: $primary		
 	.new-order
 		&:before
-			content: "\f016"
+			content: "\f217"
 	.my-account		
 		&:before
 			content: "\f007"

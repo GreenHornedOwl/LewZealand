@@ -9,11 +9,13 @@
 		width: $container-lg
 .aside
 	+make-sm-column(3)
-.main 
-	min-height: 500px
+.main 	
 	@media (min-width: $screen-sm-min)
 		+make-sm-column(9)	
 		padding-right: 0px
+		min-height: 500px
+	@media (max-width: $screen-sm-min - 1)
+		min-height: 1px		
 .breadcrumbs
 	padding: 0px $spacing
 	background-color: #000
@@ -62,6 +64,9 @@ select
 	+clearfix
 	margin-bottom: $spacing*2
 	border-bottom: 2px solid $primary	
+	@media (max-width: $screen-sm-min - 1)
+		line-height: 2
+		margin-bottom: 1em
 	.subtitle 
 		font-size: 0.8em
 		display: inline-block
@@ -80,6 +85,8 @@ select
 			font-family: "FontAwesome"		
 			color: $secondary
 			margin-right: 0.5em
+		@media (max-width: $screen-sm-min - 1)
+			font-size: 1.2em	
 .order-header		
 	&:before 
 		content: "\f016"		
