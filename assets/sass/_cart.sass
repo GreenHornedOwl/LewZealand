@@ -81,6 +81,11 @@
 				width: 350px
 				float: right
 				margin-top: $spacing*2
+				// width: 310px
+				table-layout: fixed
+				tr 
+					td:nth-child(2),td:nth-child(3)
+						text-align: center
 			p 
 				margin-top: $spacing
 			table 			
@@ -199,3 +204,23 @@
 .purchase-address
 	span 
 		display: block
+.hidden-xs
+	display: none 
+	@media (min-width: $screen-sm-min)
+		display: block				
+.order-summary-block-first, .order-summary-block-third
+	width: 30%
+	float: left
+	@media (max-width: 767px)
+		width: 100%
+		clear: both
+		float: none
+.order-summary-block-second
+	width: 40%
+	float: left
+	@media (max-width: 767px)
+		width: 100%
+		clear: both
+		float: none
+.order-summary-block-third	
+	margin-bottom: $spacing
