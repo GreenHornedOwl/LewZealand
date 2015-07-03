@@ -28,6 +28,8 @@
 		display: block
 		float: left
 		line-height: 50px
+		@media (max-width: $screen-sm-min - 1)
+			font-size: 1.2em
 .sort-block
 	+clearfix
 	&:last-child 
@@ -160,3 +162,7 @@ tbody
 		font-weight: 600			
 	fieldset
 		margin-top: $spacing	
+.category-pdf
+	display: inline-block
+	float: right
+	line-height: 50px

@@ -45,6 +45,12 @@
 				color: desaturate(red, 20%)
 				cursor: pointer
 				+transition(all 0.2s ease-in)
+				position: absolute
+				top: 50%
+				right: 0.2em
+				margin-top: -0.8em
+				@media (max-width: 767px)
+					right: 0
 				&:hover 
 					color: red
 					+transform-origin(50% 50%)
@@ -218,9 +224,30 @@
 .order-summary-block-second
 	width: 40%
 	float: left
+	p 
+		&.headline
+			margin-bottom: 0.2em
+			text-transform: uppercase
+			font-weight: 700
 	@media (max-width: 767px)
 		width: 100%
 		clear: both
 		float: none
 .order-summary-block-third	
 	margin-bottom: $spacing
+.delivery-address
+	// font-size: 0.8em	
+	margin-bottom: 0.5em	
+	clear: both
+	p 
+		margin-bottom: 0.2em
+		&.headline
+			margin-bottom: 0.2em
+			text-transform: uppercase
+			font-weight: 700
+		span 
+			// font-weight: bold
+			// padding-left: 0.5em
+.purchase-address
+	span 
+		display: inline			

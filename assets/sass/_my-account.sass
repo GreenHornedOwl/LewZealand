@@ -10,15 +10,15 @@
 		.reorder
 			width: 12.5%
 		.print
-			width: 12.5%	
+			width: 12.5%  
 .my-account-header 
 	&:before
 		content: "\f007"
 .block-header
-	@extend .cart-header		
+	@extend .cart-header    
 	border-bottom: 1px solid $border-gray
 .aside-inner
-	padding-left: 0	
+	padding-left: 0 
 	.block-header 
 		margin-bottom: $spacing
 .aside-nav 
@@ -26,12 +26,12 @@
 		border-bottom: 1px solid lighten($border-gray,10%)
 		display: block
 		padding-bottom: 0.5em
-		margin-bottom: 0.5em	
+		margin-bottom: 0.5em  
 		&:before 
 			font-family: FontAwesome
 			content: "\f0da"
 			margin-right: 0.5em
-			color: $primary			
+			color: $primary     
 			+transition(all 0.2s ease-in)
 		&:hover 
 			border-color: $primary
@@ -46,9 +46,9 @@
 	background-color: #e6e7e9
 	text-transform: uppercase
 	td
-		padding: 0.5em 1em		
+		padding: 0.5em 1em    
 	td:first-child 
-		padding-left: 1em	
+		padding-left: 1em 
 	.sort 
 		width: 20px
 		display: inline-block
@@ -68,59 +68,68 @@
 		.fa-caret-down 
 			position: absolute
 			left: 0
-			top: 6px	
+			top: 6px  
 		.fa-caret-up 
 			position: absolute 
 			left: 0 
-			top: -2px 	
+			top: -2px   
 	@media (max-width: $screen-sm-min - 1)
 		font-size: 0.8em
 		td 
-			padding: 0.2em				
-.grid-order-body		
+			padding: 0.2em        
+.grid-order-body    
 	td 
 		padding: 0.5em 1em
 		text-align: left
 		
 	td:first-child 
-		padding-left: 1em		
+		padding-left: 1em   
 		line-height: 2em
 	tr:nth-child(even)
-		background-color: #f6f6f6	
+		background-color: #f6f6f6 
 	a 
 		color: $secondary
 		&:hover 
 			color: $primary
 	.order 
-		color: $primary	
+		color: $primary 
 	.reorder
 		text-align: center
 	.print 
-		text-align: center	
+		text-align: center  
 	@media (max-width: $screen-sm-min - 1)
 		font-size: 0.8em
 		margin-bottom: $spacing
 		td 
-			padding: 0.2em	
+			padding: 0.2em  
+	.pagination-custom
+		a 
+			color: #000   
+			padding: 0 0.2em
+			&.currentOrderPage
+				background-color: $secondary
+				color: #fff
+				display: inline-block
+				padding: 0px 0.5em
 .account-info
 	+make-sm-column(8)
 	+clearfix
 	padding-left: 0px
 	padding-top: 2em
 	font-size: 0.8em
-	.main-account-info	
-		width: 100%	
+	.main-account-info  
+		width: 100% 
 		@media (min-width: $screen-sm-min)
 			width: 70%
 			float: left
-		.account-title 		
+		.account-title    
 			font-weight: 700
 			width: 30%
 			// display: inline-block
 			// text-align: right
 			padding-right: 10px
 		.account-value
-		font-weight: 400	
+		font-weight: 400  
 	.aside-account-info
 		width: 100%
 		@media (min-width: $screen-sm-min)
@@ -138,7 +147,7 @@
 		@media (max-width: $screen-sm-min - 1)
 			padding-top: $spacing
 			p 
-				margin-bottom: 0			
+				margin-bottom: 0      
 .aside-manager
 	+make-sm-column(4)
 	margin-top: 2em
