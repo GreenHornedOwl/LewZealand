@@ -214,16 +214,26 @@
 	display: none 
 	@media (min-width: $screen-sm-min)
 		display: block				
-.order-summary-block-first, .order-summary-block-third
-	width: 30%
+.order-summary-block-first
+	clear: both
+	width: 100%
+	float: none
+	padding: 1em 0 0.5em
+	border-bottom: 1px solid #ddd	
+	margin-bottom: 0
+	@media (max-width: 767px)
+		margin-bottom: 1em
+.order-summary-block-third
+	width: 50%
 	float: left
 	@media (max-width: 767px)
 		width: 100%
 		clear: both
 		float: none
 .order-summary-block-second
-	width: 40%
+	width: 50%
 	float: left
+	padding-top: 1em
 	p 
 		&.headline
 			margin-bottom: 0.2em
@@ -250,4 +260,4 @@
 			// padding-left: 0.5em
 .purchase-address
 	span 
-		display: inline			
+		// display: inline			
