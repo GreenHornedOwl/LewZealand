@@ -69,10 +69,13 @@ select
 		margin-bottom: 1em
 	.subtitle 
 		font-size: 0.8em
-		display: inline-block
-		float: right
+		display: block
+		text-align: left
+		// float: right
 		margin: 0px
-		margin-top: 26px
+		// margin-top: 26px
+		@media (max-width: 767px)
+			line-height: 1.4
 		span 
 			color: $primary
 	.title
@@ -142,3 +145,28 @@ table.product-table
 	display: inline-block
 .tooltip.top .tooltip-arrow	
 	border-top-color: $secondary
+
+tr.fieldRow
+	@media (max-width: 767px)
+		display: block
+		text-align: left
+		input 
+			display: block
+			padding: 0 0.5em
+			margin: 0
+			line-height: 2em
+			height: 30px
+			margin-top: 5px
+		textarea 
+			padding: 0.5em
+			margin: 0	
+			margin-top: 5px
+		td 
+			display: block	
+			padding: 0	
+.password-error
+	background-color: rgb(253, 221, 221)
+	border-color: rgb(247, 109, 83)
+.password-success
+	background-color: rgb(208, 246, 197)
+	border-color: rgb(37, 173, 40)

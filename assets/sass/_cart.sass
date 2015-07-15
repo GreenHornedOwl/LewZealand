@@ -26,8 +26,13 @@
 		.case-ordered 
 			text-align: right
 			padding-right: 10px
+			@media (max-width: $screen-sm-min - 1)
+				text-align: center
+				padding: 0
 			input 			
 				margin-right: 5px
+				@media (max-width: $screen-sm-min - 1)
+					margin-right: 0
 				max-width: 40px
 				padding: 0.5em
 				@media (min-width: $screen-sm-min)
@@ -71,6 +76,15 @@
 	.description 
 		padding-right: $spacing	
 		text-align: left
+		position: relative
+		a 
+			position: absolute
+			right: $spacing
+			top: $spacing	
+			.fa 
+				position: relative
+				color: red
+			
 	.item 
 		text-align: left	
 	.cart-summary
@@ -261,3 +275,21 @@
 .purchase-address
 	span 
 		// display: inline			
+.cart-comment
+	margin-top: 1em
+	label
+		margin-bottom: 0.5em
+		display: block
+		text-transform: uppercase		
+	textarea
+		display: block
+		max-width: 30em
+		width: 100%
+		@media (max-width: 767px)
+			max-width: 100%
+	p 
+		max-width: 30em
+		width: 100%
+		border: 1px solid #D1D3D4
+		padding: 0.5em
+		border-radius: 6px				

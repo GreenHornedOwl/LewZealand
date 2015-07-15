@@ -31,12 +31,12 @@
 			display: inline-block
 		.show-tablet
 			display: none
-			@media (max-width: $screen-md-min - 1)
+			@media (max-width: $screen-lg-min - 1)
 				display: inline-block
 				margin-bottom: 0.5em
 		.show-desktop
 			display: none	
-			@media (min-width: $screen-md-min)
+			@media (min-width: $screen-lg-min)
 				display: inline-block		
 		a 
 			margin-left: 1em
@@ -57,7 +57,11 @@
 			content: "\f07a"
 	.header-logout
 		&:before
-			content: "\f08b"		
+			content: "\f08b"	
+	.homepage-link
+		&:before
+			content: "\f015"
+					
 .footer
 	background-color: $primary
 	text-align: center

@@ -1,6 +1,13 @@
 .featured
 	position: relative
 	margin-bottom: $spacing*2
+	overflow: hidden
+	height: 571px
+	@media (min-width: $screen-md-min)
+		height: 565px
+	@media (min-width: $screen-lg-min)
+		height: 579px		
+	
 	h1
 		position: absolute
 		font-size: 2em
@@ -84,7 +91,9 @@
 	.side-nav 
 		margin-bottom: $spacing*2
 		a 
-			margin-bottom: 0.5em			
+			margin-bottom: 0.5em		
+			@media (max-width: $screen-md-min - 1)
+				padding: 0.5em	
 			// &:before
 			// 	color: $primary
 			// 	font-family: FontAwesome
