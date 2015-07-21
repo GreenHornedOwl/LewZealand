@@ -89,7 +89,12 @@
 		text-align: left	
 	.cart-summary
 		+clearfix
-		margin-top: $spacing*2
+		width: 50%
+		float: right
+		// margin-top: $spacing*2
+		@media (max-width: $screen-sm-min - 1)
+			float: none
+			width: 100%
 		margin-bottom: $spacing	
 		border-bottom: 1px solid $border-gray
 		padding-bottom: $spacing*2
@@ -277,6 +282,12 @@
 		// display: inline			
 .cart-comment
 	margin-top: 1em
+	width: 50%
+	float: left
+	@media (max-width: $screen-sm-min - 1)
+		width: 100%
+		float: none
+		margin-bottom: $spacing
 	label
 		margin-bottom: 0.5em
 		display: block
@@ -289,6 +300,8 @@
 			max-width: 100%
 	p 
 		max-width: 30em
+		@media (max-width: $screen-sm-min - 1)
+			max-width: 100%
 		width: 100%
 		border: 1px solid #D1D3D4
 		padding: 0.5em
